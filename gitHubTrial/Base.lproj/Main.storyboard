@@ -16,24 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HI!!! welcome to the trial project" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-fg-3UM">
-                                <rect key="frame" x="86" y="166" width="243" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HI!!! welcome to the trial project" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-fg-3UM">
+                                <rect key="frame" x="86" y="166" width="243" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oK-OI-ejm">
+                                <rect key="frame" x="139" y="433" width="137" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="selfie"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ni-nG-izT">
+                                <rect key="frame" x="139" y="528" width="137" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="library"/>
+                                <connections>
+                                    <action selector="choosePhotoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qij-5y-xC3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IM3-Yu-fqq">
+                                <rect key="frame" x="87" y="233.5" width="240" height="153.5"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ni-nG-izT" firstAttribute="top" secondItem="9oK-OI-ejm" secondAttribute="bottom" constant="64" id="9p3-RK-Jxg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9oK-OI-ejm" secondAttribute="trailing" constant="138" id="H84-ld-Hcv"/>
+                            <constraint firstItem="pbA-fg-3UM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="Nyt-Ac-3Hq"/>
+                            <constraint firstItem="IM3-Yu-fqq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="189" id="U2u-Yi-6tx"/>
+                            <constraint firstItem="1Ni-nG-izT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="YOO-Mi-vF4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IM3-Yu-fqq" secondAttribute="trailing" constant="87" id="Z42-4v-u9I"/>
+                            <constraint firstItem="pbA-fg-3UM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="bX4-gn-XPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Ni-nG-izT" secondAttribute="bottom" constant="303" id="hxP-qc-J8W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pbA-fg-3UM" secondAttribute="trailing" constant="85" id="kJ1-Sr-wnu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ni-nG-izT" secondAttribute="trailing" constant="138" id="n2s-HK-f8a"/>
+                            <constraint firstItem="IM3-Yu-fqq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="nAw-nf-ccH"/>
+                            <constraint firstItem="9oK-OI-ejm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="pGO-Ad-DtA"/>
+                            <constraint firstItem="9oK-OI-ejm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="389" id="tD9-AC-j8V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IM3-Yu-fqq" secondAttribute="bottom" constant="473.5" id="vnZ-PV-Hit"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="IM3-Yu-fqq" id="PkY-AR-xSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="84"/>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
